@@ -1,0 +1,37 @@
+PAL Compiler
+Matt Kline
+02-11-2018
+CS 3210
+
+Program was read from samplePAL2.pal
+1.       SRT
+2.       MOV 1,  R1            
+   **Invalid Opcode. MOV was not found.
+3.       MOVE 0, R2, 2         
+   **Invalid number of operands. This command should have exactly 2 operands.
+4.       MOVE 5,               
+   **Invalid number of operands. This command should have exactly 2 operands.
+5.       MOVE 0,  R7
+6.       ;comment
+   **End line operator is required following a comment.
+7. LONE: MUL  R1, R1, R2
+8. LTWO: ADD  R2, R7, R7      
+9. L1:   INC  R1
+   **Ill Formed Label. Label cannot contain numbers.
+10.       BEQ  R6, R1, DONE
+11.       BR   LONE
+12. DONE: END
+
+Summary
+--------------------------------------------------
+Total Errors: 5.
+    1 Ill Formed Label Errors.
+    1 Invalid Opcode Errors.
+    2 Too Few Operands Errors.
+    1 Too Many Operands Errors.
+
+Total warnings: 2.
+    LTWO is never accessed.
+    L1 is never accessed.
+
+PAL Compile completed with errors.

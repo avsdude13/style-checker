@@ -1,0 +1,33 @@
+PAL Compiler
+Matt Kline
+02-11-2018
+CS 3210
+
+Program was read from samplePAL.pal
+1.       SRT
+   **Invalid Opcode. null was not found.
+2.       MOVE 1,  R1
+   **Invalid Opcode.   R1 was not found.
+3.       MOVE 5,  R6
+   **Invalid Opcode.   R6 was not found.
+4.       MOVE 0,  R7
+   **Invalid Opcode.   R7 was not found.
+5. LONE: ADD  R1, R7, R7
+6.       INC  R1
+   **Invalid Opcode. null was not found.
+7.       BEQ  R6, R1, DONE
+   **Invalid Opcode.  R1 was not found.
+8.       BR LONE
+   **Invalid Opcode. null was not found.
+9. DONE: END
+
+Summary
+--------------------------------------------------
+Total Errors: 7.
+    7 Invalid Opcode Errors.
+
+Total warnings: 2.
+    LONE is never accessed.
+    DONE is never accessed.
+
+PAL Compile completed with errors.

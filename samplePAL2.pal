@@ -1,0 +1,14 @@
+      SRT
+      MOV 1,  R1            ;error MOV should be MOVE ELO
+      MOVE 0, R2, 2         ;error too many commands ELO
+      MOVE 5,               ;error too few commands ELO
+      MOVE 0,  R7
+
+      ;comment
+            ;error on previous line no ELO
+LONE: MUL  R1, R1, R2
+LTWO: ADD  R2, R7, R7      ;warning LTWO is not used ELO
+L1:   INC  R1
+      BEQ  R6, R1, DONE
+      BR   LONE
+DONE: END
